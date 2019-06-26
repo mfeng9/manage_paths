@@ -6,7 +6,7 @@ This is to resolve the incompatibility between anaconda and ROS
 
 ## Set up
 
-modify the following file paths as needed
+modify the file paths as needed (including the paths below and paths inside the bash & python files)
 
 ### add the following to the bashrc file
 
