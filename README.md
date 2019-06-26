@@ -19,6 +19,6 @@ alias backup_path='source /home/username/apps/manage_path/backup_path.sh'
 ```bash
 source /home/username/apps/manage_path/backup_path.sh
 ```
-## note
+## Note
 backup_paths.txt is regenerated every time bashrc is sourced 
 e.g. opening new terminal/terminal tabs
