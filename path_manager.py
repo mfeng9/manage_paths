@@ -118,9 +118,9 @@ def update_pythonpath_bash(pythonpath):
     """
     pythonpath: a list of string
     """
-    cmd = "export PYTHONPATH="
+    cmd = "export PYTHONPATH={}:".format(os.getcwd())
     for path in pythonpath:
-        if not (self_path in path):
+        if not (self_path in path or os.getcwd() in path):
             cmd += path
             cmd += ':'
     cmd = cmd[:-1] # remove the last :
@@ -133,7 +133,7 @@ def finish_bash(filename):
 
 def has_conda_on():
     sys_path = os.environ['PATH']
-    ros_idx = sys_path.find('/opt/ros/kinetic/bin')
+    ros_idx = sys_path.find(ros_path)
     conda_idx = sys_path.find(conda_path)
     if conda_idx != -1 and conda_idx < ros_idx:
         return True
